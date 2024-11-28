@@ -1,0 +1,31 @@
+<div>
+  <h2>Centros</h2>
+
+  <div *ngIf="centros.length > 0">
+    <div>
+      <img [src]="centros[posicion].logo" alt="Logo">
+      <h3>{{ centros[posicion].nombre }}</h3>
+      <p>Localidad: {{ centros[posicion].localidad }}</p>
+      <ul>
+        <li *ngFor="let ciclo of centros[posicion].ciclos">{{ ciclo }}</li>
+      </ul>
+    </div>
+  </div>
+
+  <div>
+    <h4>Pila de centros eliminados:</h4>
+    <p>{{ pilaContenido }}</p>
+  </div>
+
+  <div>
+    <button class="btn btn-primary" *ngIf="mostrarAnterior" (click)="anterior()">ANTERIOR</button>
+
+    <button class="btn btn-primary" (click)="eliminar()">ELIMINAR</button>
+
+    <button class="btn btn-primary" *ngIf="pila.length > 0" (click)="insertar()">INSERTAR</button>
+
+    <button class="btn btn-primary" *ngIf="mostrarPosterior" (click)="siguiente()">POSTERIOR</button>
+  </div>
+</div>
+
+

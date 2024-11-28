@@ -1,0 +1,22 @@
+<h1>IES Playamar / jacaranda</h1>
+<dl>
+  <td>Centro educativo:</td>
+  <dd>{{centroActual.nombre}}</dd>
+
+  <td>Localidad</td>
+  <dd>{{centroActual.localidad}}</dd>
+
+  <td>Familias profesionales</td>
+  <dd>{{centroActual.familias}}</dd>
+
+  <td>Centro</td>
+  <dd>{{mayusculas()}}</dd>
+
+  <td>Logo</td>
+  <dd><img [src]="centroActual.logo" alt="Logo del centro" class="img-fluid" /></dd>
+
+  <button *ngIf="centroActual===centro1" class="btn btn-primary" (click)="cambiarCentro()">
+    Cambiar Centro
+  </button>
+
+  </dl>
